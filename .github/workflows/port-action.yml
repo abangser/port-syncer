@@ -52,6 +52,7 @@ jobs:
             echo '${{ inputs.manifest }}' | jq .  > temp.json
             yaml_data=$(yq -p json -o yaml temp.json)
             name=$(echo '${{ inputs.manifest }}' | jq .metadata.name)
+            mkdir -p ${{ inputs.folder }}
             if [ "${{ inputs.operation }}" = "DELETE" ]; then
               rm -f "${{ inputs.folder }}/$name".yaml
             else
