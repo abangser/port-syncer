@@ -45,6 +45,7 @@ jobs:
             if [ "${{ inputs.operation }}" = "DELETE" ]; then
               rm -f "${{ inputs.folder }}/$name.yaml"
             else
+              # TODO: Check if file exists, if it does, this shouldn't create, only update
               echo "$yaml_data" > "${{ inputs.folder }}/$name.yaml"
             fi
             rm -f temp.json
