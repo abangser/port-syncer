@@ -33,17 +33,6 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - uses: port-labs/port-github-action@v1
-        with:
-          clientId: ${{ secrets.PORT_CLIENT_ID }}
-          clientSecret: ${{ secrets.PORT_CLIENT_SECRET }}
-          operation: PATCH_RUN
-          runId: ${{inputs.runId}} 
-          icon: GithubActions
-          logMessage: "Creating branch with name runs/${{inputs.runId}} 🏃🏻‍♂️"
-      - name: create-branch
-        run: |
-          git checkout -b runs/${{inputs.runId}}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.10' 
