@@ -28,7 +28,7 @@ on:
         type: string
 
 jobs:
-  open-pr:
+  commit-to-main:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
