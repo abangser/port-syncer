@@ -64,8 +64,13 @@ jobs:
           git config user.name "GitHub Action"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "chore: ${{ inputs.operation }} resource by ${{ inputs.triggeringUser }}"
-          git push origin main
+          if ! git diff-index --quiet HEAD; then
+            echo "changes exist, committing to main"
+            git commit -m "chore: ${{ inputs.operation }} resource by ${{ inputs.triggeringUser }}"
+            git push origin main
+          else
+            echo "no changes to commit. Resource must have been created outside of Port. Skipping commit.
+          fi
       - uses: port-labs/port-github-action@v1
         if: success()
         with:
