@@ -4,4 +4,4 @@ metadata:
   namespace: default
   name: my-blah
 spec:
-  namespaceName: blah
+  namespaceName: blah2
