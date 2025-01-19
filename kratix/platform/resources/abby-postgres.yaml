@@ -1,9 +1,0 @@
-apiVersion: marketplace.kratix.io/v1alpha1
-kind: postgresql
-metadata:
-  namespace: default
-  name: abby-postgres
-spec:
-  dbName: abby
-  env: dev
-  teamId: tiger
