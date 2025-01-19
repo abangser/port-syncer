@@ -1,0 +1,9 @@
+apiVersion: marketplace.kratix.io/v1alpha1
+kind: postgresql
+metadata:
+  namespace: default
+  name: myblah
+spec:
+  dbName: blah
+  env: dev
+  teamId: tiger
