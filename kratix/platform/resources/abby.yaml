@@ -1,8 +1,11 @@
 apiVersion: marketplace.kratix.io/v1alpha1
-kind: namespace
+kind: deployment
 metadata:
   namespace: default
   name: abby
 spec:
-  clusterName: platform
-  namespaceName: abby
+  deploymentConfig:
+    image: syntasso/website
+    lifecycle: dev
+    replicas: 1
+    servicePort: 80
