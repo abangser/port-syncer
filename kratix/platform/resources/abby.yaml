@@ -1,11 +1,9 @@
 apiVersion: marketplace.kratix.io/v1alpha1
-kind: deployment
+kind: database
 metadata:
   namespace: default
   name: abby
 spec:
-  deploymentConfig:
-    image: syntasso/website
-    lifecycle: dev
-    replicas: 1
-    servicePort: 80
+  backupEnabled: false
+  dbName: postgres
+  lifecycle: dev
