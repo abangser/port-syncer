@@ -1,0 +1,9 @@
+apiVersion: marketplace.kratix.io/v1alpha1
+kind: database
+metadata:
+  namespace: default
+  name: josh
+spec:
+  backupEnabled: true
+  dbName: postgres
+  lifecycle: dev
