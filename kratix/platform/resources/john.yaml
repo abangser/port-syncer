@@ -1,0 +1,12 @@
+apiVersion: marketplace.kratix.io/v1alpha1
+kind: app
+metadata:
+  namespace: default
+  name: john
+spec:
+  appConfig:
+    image: syntasso/sample-todo:v0.1.0
+    lifecycle: prod
+    requiresBucketBackend: true
+    requiresDatabaseBackend: true
+    servicePort: 80
