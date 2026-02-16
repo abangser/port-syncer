@@ -4,6 +4,6 @@ metadata:
   namespace: default
   name: abby
 spec:
-  backupEnabled: false
+  backupEnabled: true
   dbName: postgres
   lifecycle: dev
