@@ -1,9 +1,0 @@
-apiVersion: marketplace.kratix.io/v1alpha1
-kind: database
-metadata:
-  namespace: default
-  name: abby
-spec:
-  backupEnabled: true
-  dbName: postgres
-  lifecycle: dev
