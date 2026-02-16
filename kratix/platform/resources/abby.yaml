@@ -1,0 +1,11 @@
+apiVersion: marketplace.kratix.io/v1alpha1
+kind: deployment
+metadata:
+  namespace: default
+  name: abby
+spec:
+  deploymentConfig:
+    image: syntasso/sample-todo
+    lifecycle: dev
+    replicas: 1
+    servicePort: 80
