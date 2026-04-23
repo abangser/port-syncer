@@ -1,0 +1,8 @@
+apiVersion: marketplace.kratix.io/v1alpha1
+kind: namespace
+metadata:
+  namespace: default
+  name: test
+spec:
+  clusterName: test
+  namespaceName: test
